@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liquid Logo Studio</title>
+  <meta name="description" content="Turn any logo into animated liquid chrome, gold or holographic metal in your browser. Free, no upload, embeddable.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"></div>
+  <header class="nav">
+    <span class="brand">Chase Builds</span>
+    <nav aria-label="Page">
+      <a href="#studio">Studio</a>
+      <a href="#embed">Embed</a>
+      <a href="https://github.com/chasebuilds/liquid-logo-studio">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Liquid Logo Studio</h1>
+      <p>Drop in your logo. Get a flowing liquid-metal version you can export or paste onto your website.</p>
+    </section>
+
+    <section id="studio" class="studio" aria-label="Studio">
+      <div class="panel stage-wrap">
+        <div id="stage" class="stage" data-bg="dark">
+          <canvas id="canvas" aria-label="Your logo as liquid metal" role="img"></canvas>
+          <div id="drop" class="drop" hidden>Drop an SVG or PNG here</div>
+          <p id="notice" class="notice" hidden></p>
+        </div>
+        <div class="stage-bar">
+          <label class="file">
+            <input id="file" type="file" accept="image/svg+xml,image/png">
+            <span>Choose a logo (SVG or PNG)</span>
+          </label>
+          <div class="samples" role="group" aria-label="Sample logos">
+            <span class="muted">or try</span>
+            <button type="button" class="pill" data-sample="orbit">Orbit</button>
+            <button type="button" class="pill" data-sample="peaks">Peaks</button>
+            <button type="button" class="pill" data-sample="wave">Wave</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel controls">
+        <h2>Material</h2>
+        <div class="presets" role="group" aria-label="Color preset">
+          <button type="button" class="pill on" data-preset="chrome">Chrome</button>
+          <button type="button" class="pill" data-preset="gold">Gold</button>
+          <button type="button" class="pill" data-preset="holographic">Holographic</button>
+          <button type="button" class="pill" data-preset="tint">Brand tint</button>
+        </div>
+        <label class="row tint-row" id="tintRow" hidden>
+          <span>Brand color</span>
+          <input id="tint" type="color" value="#3b82f6">
+        </label>
+
+        <h2>Motion and shape</h2>
+        <div class="row"><label for="speed">Flow speed</label><input id="speed" type="range" min="0" max="2" step="0.05" value="0.6"><output for="speed"></output></div>
+        <div class="row"><label for="refraction">Refraction</label><input id="refraction" type="range" min="0" max="1" step="0.01" value="0.5"><output for="refraction"></output></div>
+        <div class="row"><label for="softness">Edge softness</label><input id="softness" type="range" min="0" max="1" step="0.01" value="0.5"><output for="softness"></output></div>
+        <div class="row"><label for="light">Light angle</label><input id="light" type="range" min="0" max="360" step="1" value="35"><output for="light"></output></div>
+        <div class="row"><label for="bevel">Bevel depth</label><input id="bevel" type="range" min="0.1" max="1" step="0.01" value="0.5"><output for="bevel"></output></div>
+
+        <h2>Background</h2>
+        <div class="presets" role="group" aria-label="Preview background">
+          <button type="button" class="pill on" data-bg="dark">Dark</button>
+          <button type="button" class="pill" data-bg="light">Light</button>
+          <button type="button" class="pill" data-bg="clear">Transparent</button>
+        </div>
+
+        <h2>Export</h2>
+        <div class="presets">
+          <button type="button" class="pill solid" id="exportPng">Save PNG</button>
+          <button type="button" class="pill solid" id="exportWebm">Record WebM (5 s)</button>
+        </div>
+        <p id="exportNote" class="muted small">PNG keeps a transparent background. WebM uses the background you picked above.</p>
+      </div>
+    </section>
+
+    <section id="embed" class="panel embed">
+      <h2>Put it on your website</h2>
+      <p>Copy these two lines into your page. The script is one small file; the logo stays an image file on your own site. If a visitor's browser cannot run WebGL2, or prefers reduced motion, they get your plain logo or a still frame.</p>
+      <pre id="snippet" tabindex="0"></pre>
+      <div class="presets">
+        <button type="button" class="pill solid" id="copySnippet">Copy snippet</button>
+        <span id="copyNote" class="muted small" role="status"></span>
+      </div>
+      <p class="muted small">Replace <code>your-logo.svg</code> with the path to your own logo file on your site.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>By Chase Builds. MIT licensed. Inspired by the Paper Design liquid-logo shader; this version is written from scratch. Everything runs in your browser, nothing is uploaded.</p>
+  </footer>
+
+  <script src="liquid-logo.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
