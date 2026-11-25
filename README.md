@@ -65,3 +65,11 @@ The shader and the mask code are written from scratch for this project. The idea
 ## License
 
 MIT, Chase Builds.
+
+## More from Chase Builds
+
+- **[notebook-shelf](https://github.com/chasebuilds/notebook-shelf)**: A shelf of notebooks that open in 3D. Great for portfolios, menus and catalogs. ([live demo](https://chasebuilds.github.io/notebook-shelf/))
+- **[r3f-showcase](https://github.com/chasebuilds/r3f-showcase)**: 3D product configurator, scroll hero and gallery wall for a business site. ([live demo](https://chasebuilds.github.io/r3f-showcase/))
+- **[dither-pond](https://github.com/chasebuilds/dither-pond)**: A stylized 3D scene with a day-to-night slider and a mix of animals, boat, bike, wind and water. ([live demo](https://chasebuilds.github.io/dither-pond/))
+
+[All projects, sorted by industry](https://github.com/chasebuilds) · [chasebuilds.github.io](https://chasebuilds.github.io)
