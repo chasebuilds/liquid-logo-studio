@@ -6,7 +6,7 @@ Turn your logo into flowing liquid chrome, gold or holographic metal. Drop in an
 
 **Live demo: https://chasebuilds.github.io/liquid-logo-studio/**
 
-![The studio with a sample logo in liquid chrome](docs/preview.png)
+![Recorded from the live demo: a sample logo as animated liquid chrome while the light angle sweeps](docs/preview.gif)
 
 ## What you get
 
@@ -16,6 +16,8 @@ Turn your logo into flowing liquid chrome, gold or holographic metal. Drop in an
 - **Export:** a transparent PNG, or a 5 second WebM video.
 - **Runs in the browser:** your logo is never uploaded anywhere.
 - **Polite by default:** people who set "reduce motion" see a still frame, the animation pauses when the tab is hidden or scrolled off screen, and browsers without WebGL2 get your plain logo.
+
+![The studio with a sample logo in liquid chrome](docs/preview.png)
 
 ## Put it on your website
 
